@@ -1,0 +1,42 @@
+/*--------------LAYOUT*/
+body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	color: #fff;
+	background-color: #fff;
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px;
+}
+.container{
+	max-width: 1172px;
+	width: 100%;
+}
+.row{
+	margin: 0;
+}
+
+/*--------------FONTS*/
+.nav-bar{
+	text-transform: uppercase;
+}
+a{
+	text-decoration: none;
+	color: #fff;
+}
+a:hover{
+	text-decoration: underline;
+	color: #20a7d1;
+}
+
+/*----------------STYLE*/
+.nav-bar{
+	background-color: #272b2f; 
+}
+.nav-bar p{
+	display: inline-block;
+}
+.nav-bar ul,
+.nav-bar ul li{
+	display: inline-block;
+}
