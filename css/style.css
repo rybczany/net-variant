@@ -1,3 +1,32 @@
+@font-face {
+  font-family: 'karbon-bold';
+  src:  url('../fonts/Karbon-Bold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'karbon-light';
+  src:  url('../fonts/Karbon-Light.otf') format('opentype');
+}
+@font-face {
+  font-family: 'karbon-thin';
+  src:  url('../fonts/Karbon-Thin.otf') format('opentype');
+}
+@font-face {
+  font-family: 'droid-sans';
+  src:  url('../fonts/DroidSans.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'droid-sans_bold';
+  src:  url('../fonts/DroidSans-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'walkway-ultra_bold';
+  src:  url('../fonts/Walkway UltraBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'walkway-semi_bold';
+  src:  url('../fonts/Walkway SemiBold.ttf') format('truetype');
+}
+
 /*--------------LAYOUT*/
 body {
 	margin: 0;
@@ -5,7 +34,7 @@ body {
 	border: 0;
 	color: #fff;
 	background-color: #fff;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'karbon-thin';
 	font-size: 14px;
 }
 .container{
@@ -15,10 +44,12 @@ body {
 .row{
 	margin: 0;
 }
+
 /*-------------GLOBAL*/
 ul, li{
 	display: inline-block;
 	padding: 0;
+	margin: 0;
 }
 
 
@@ -28,11 +59,17 @@ ul, li{
 }
 .nav p{
 	font-size: 29px;
+	font-family: 'walkway-semi_bold';
 }
-a{
+.nav p span{
+	font-family: 'walkway-ultra_bold';
+}
+.nav__item a{
+	font-family: 'karbon-bold';
 	font-size: 13px;
 	text-decoration: none;
 	color: #fff;
+	transition: color .2s ease;
 }
 a:hover{
 	text-decoration: underline;
@@ -40,31 +77,59 @@ a:hover{
 }
 /*--------------ICONS*/
 
+.icon{
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	line-height: 70px;
+	font-size: 20px;
+	transition: color .3s ease;
+}
 .icon-user,
 .icon-earth,
 .icon-heart{
-	font-size: 20px;
 	color: #676f75;
 }
 
 /*----------------STYLE*/
+
 .nav{
 	background-color: #272b2f; 
 }
-.nav p{
+.logo p{
 	display: inline-block;
+	margin: 19px 20px;
+	border-bottom: 2px solid #f19621;
+	line-height: 30px;
+}
+.logo p span{
+
+	border-bottom: 2px solid #1fb5e3;
 }
 .nav__item li{
 	border-left: 1px solid  #676f75;
+}
+.nav__item--text{
+	margin: 28px -123px 0 0;
+}
+.nav__item--text li{
 	padding: 0 37px;
 }
 .nav__item--text li:nth-child(1){
 	border-left: none;
 }
-.nav__item--text li{
-	margin-left: -37px;
+.nav__item--icon{
+	margin-right: -16px;
 }
 .nav__item--icon li{
 	text-align: center;
 }
+.icon-heart:hover{
+	color: #ff4989;
+}
+.icon-user:hover,
+.icon-earth:hover{
+	color: #fff;
+}
+
 
