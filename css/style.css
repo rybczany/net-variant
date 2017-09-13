@@ -15,12 +15,22 @@ body {
 .row{
 	margin: 0;
 }
+/*-------------GLOBAL*/
+ul, li{
+	display: inline-block;
+	padding: 0;
+}
+
 
 /*--------------FONTS*/
-.nav-bar{
+.nav{
 	text-transform: uppercase;
 }
+.nav p{
+	font-size: 29px;
+}
 a{
+	font-size: 13px;
 	text-decoration: none;
 	color: #fff;
 }
@@ -28,15 +38,33 @@ a:hover{
 	text-decoration: underline;
 	color: #20a7d1;
 }
+/*--------------ICONS*/
+
+.icon-user,
+.icon-earth,
+.icon-heart{
+	font-size: 20px;
+	color: #676f75;
+}
 
 /*----------------STYLE*/
-.nav-bar{
+.nav{
 	background-color: #272b2f; 
 }
-.nav-bar p{
+.nav p{
 	display: inline-block;
 }
-.nav-bar ul,
-.nav-bar ul li{
-	display: inline-block;
+.nav__item li{
+	border-left: 1px solid  #676f75;
+	padding: 0 37px;
 }
+.nav__item--text li:nth-child(1){
+	border-left: none;
+}
+.nav__item--text li{
+	margin-left: -37px;
+}
+.nav__item--icon li{
+	text-align: center;
+}
+
