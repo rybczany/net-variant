@@ -40,9 +40,13 @@ body {
 .container{
 	max-width: 1172px;
 	width: 100%;
+	margin: 0 auto;
 }
 .row{
 	margin: 0;
+}
+.gray{
+	background-color: #f0f2f4;
 }
 
 /*-------------GLOBAL*/
@@ -57,10 +61,27 @@ img {
 	display: block;
 	margin: 0 auto;
 }
+h2, p{
+	margin: 0;
+}
 
 
 /*--------------FONTS*/
-.nav{
+h2, p{
+	margin: 0;
+}
+h1{
+	font-size: 80px;
+	line-height: 65px;
+}
+h2{
+	font-size: 60px;
+	line-height: 45px;
+	color: #20a7d1;
+}
+.nav,
+.nav-lower,
+.service__header p{
 	text-transform: uppercase;
 }
 .nav p{
@@ -70,16 +91,37 @@ img {
 .nav p span{
 	font-family: 'walkway-ultra_bold';
 }
-.nav__item a{
+.nav__item a,
+.nav-lower__item a,
+.service__header p{
 	font-family: 'karbon-bold';
 	font-size: 13px;
+}
+.nav__item a,
+.nav-lower__item a{
 	text-decoration: none;
 	color: #fff;
+	-webkit-transition: color .2s ease;
+	-o-transition: color .2s ease;
 	transition: color .2s ease;
+}
+.nav-lower__item a{
+	font-size: 17px;
+	color: #909fae;
 }
 a:hover{
 	text-decoration: underline;
 	color: #20a7d1;
+}
+.service p{
+	color: #909fae;
+}
+.service__descrip p{
+	font-family: 'droid-sans';
+	font-size: 14px;
+	color: #626a72;
+	line-height: 22px;
+	text-align: justify;
 }
 /*--------------ICONS*/
 
@@ -89,6 +131,8 @@ a:hover{
 	height: 70px;
 	line-height: 70px;
 	font-size: 20px;
+	-webkit-transition: color .3s ease;
+	-o-transition: color .3s ease;
 	transition: color .3s ease;
 }
 .icon-user,
@@ -122,7 +166,8 @@ a:hover{
 .nav__item--text li{
 	padding: 0 37px;
 }
-.nav__item--text li:nth-child(1){
+.nav__item--text li:nth-child(1),
+.nav-lower__item li:nth-child(1){
 	border-left: none;
 }
 .nav__item--icon{
@@ -141,12 +186,20 @@ a:hover{
 .icon-earth:hover{
 	color: #fff;
 }
+/*----------------SLIDER*/
 .slider{
 	position: relative;
 	overflow: hidden;
 }
+.slider--descrip{
+	position: absolute;
+	top: 150px;
+	padding: 0 700px 0 0;
+}
 .pentagon{
-	transform: rotate(270deg);
+	-webkit-transform: rotate(270deg);
+	    -ms-transform: rotate(270deg);
+	        transform: rotate(270deg);
 	position: absolute;
 	right: 0;
 	top: 40%;
@@ -185,9 +238,50 @@ a:hover{
 	width: 4px;
 	height: 15px;
 	background-color: #fff;
-	transform: rotate(-40deg);
+	-webkit-transform: rotate(-40deg);
+	    -ms-transform: rotate(-40deg);
+	        transform: rotate(-40deg);
 }
 .arrow::after{
 	left: 43px;
-	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	    -ms-transform: rotate(45deg);
+	        transform: rotate(45deg);
+}
+/*-------------LOWER NAVIGATION*/
+.nav-lower{
+	width: 73%;
+	text-align: center;
+	margin: 0 auto;
+}
+.nav-lower__item li{
+	padding: 25px 68px 20px;
+	border-left: 1px solid  #e3e7eb;
+	position: relative;
+}
+.nav-lower__item li::before{
+	content: '';
+	display: inline-block;
+	position: absolute;
+	left: -1px;
+	width: 1px;
+	height: 17px;
+	background-color: #1fb5e3;
+}
+.nav-lower__item li:first-child::before{
+	content: none;
+}
+/*---------------SERVICE*/
+.service__header,
+.service__descrip{
+	padding: 53px 0 0;
+}
+.start-md p{
+	padding-right: 20px;
+}
+.end-md p{
+	padding-left: 20px;
+}
+
+
 
