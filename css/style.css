@@ -1,22 +1,32 @@
 @font-face {
   font-family: 'karbon-bold';
   src:  url('../fonts/Karbon-Bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
   font-family: 'karbon-light';
   src:  url('../fonts/Karbon-Light.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
   font-family: 'karbon-thin';
   src:  url('../fonts/Karbon-Thin.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
   font-family: 'droid-sans';
   src:  url('../fonts/DroidSans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
   font-family: 'droid-sans_bold';
   src:  url('../fonts/DroidSans-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
   font-family: 'walkway-ultra_bold';
@@ -49,7 +59,10 @@ body {
 	background-color: #f0f2f4;
 }
 .blue{
-	background-color: #20a7d1;
+	background: -webkit-linear-gradient(280deg, #20a7d1 50%, #25c3e8, #20a7d1);
+	background: -moz-linear-gradient(280deg, #20a7d1 50%, #25c3e8, #20a7d1);
+	background: -o-linear-gradient(280deg, #20a7d1 50%, #25c3e8, #20a7d1);
+	background: linear-gradient(170deg, #20a7d1 50%, #25c3e8, #20a7d1);
 }
 
 /*-------------GLOBAL*/
@@ -64,14 +77,15 @@ img {
 	display: block;
 	margin: 0 auto;
 }
-h2, p{
-	margin: 0;
-}
 
 
 /*--------------FONTS*/
-h2, p{
+h2, h3, p{
 	margin: 0;
+}
+h1, h2, h3, p{
+	font-weight: normal;
+  	font-style: normal;
 }
 h1{
 	font-size: 80px;
@@ -82,13 +96,17 @@ h2{
 	line-height: 45px;
 	color: #20a7d1;
 }
+h3{
+	font-size: 40px;
+}
 .product h2{
 	color: inherit;
 }
 .nav,
 .nav-lower,
 .service__header p,
-.trapeze--text{
+.trapeze--text,
+.box__text--title p{
 	text-transform: uppercase;
 }
 .nav p{
@@ -101,7 +119,8 @@ h2{
 .nav__item a,
 .nav-lower__item a,
 .service__header p,
-.trapeze--text{
+.trapeze--text,
+.box__text--title p{
 	font-family: 'karbon-bold';
 	font-size: 13px;
 }
@@ -122,16 +141,23 @@ a:hover{
 	text-decoration: underline;
 	color: #20a7d1;
 }
-.service p,
-.product p{
+.service p{
 	color: #909fae;
 }
-.service__descrip p{
+.product p{
+	color: #0a647f;
+}
+.service__descrip p,
+.product .box__text--article p{
 	font-family: 'droid-sans';
 	font-size: 14px;
 	color: #626a72;
 	line-height: 22px;
 	text-align: justify;
+}
+.product .box__text--article p{
+	color: #fff;
+	text-align: left;
 }
 p.trapeze--text{
 	color: #fff;
@@ -272,9 +298,34 @@ p.trapeze--text{
 }
 /*-------------LOWER NAVIGATION*/
 .nav-lower{
-	width: 73%;
+	position: relative;
 	text-align: center;
 	margin: 0 auto;
+}
+.hand-nav{
+	position: absolute;
+	width: 45px;
+	height: 45px;
+	right: 10px;
+	z-index: 1;
+}
+.nav-lower::before,
+.nav-lower::after{
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 48px;
+	height: 0;
+	border-left: 0px solid transparent;
+	border-right: 55px solid transparent;
+	border-bottom: 100px solid #f0f2f4;
+}
+.nav-lower::after{
+	left: auto;
+	right: 0;
+	border-left: 55px solid transparent;
+	border-right: 0px solid transparent;
 }
 .nav-lower__item li{
 	padding: 25px 68px 20px;
@@ -361,6 +412,7 @@ p.trapeze--text{
 	right: -20px;
 	border-left: 20px solid transparent;
 }
+
 /*----------------PRODUCTS*/
 .product .trapeze{
 	border-bottom: 32px solid #fff;
@@ -368,10 +420,46 @@ p.trapeze--text{
 .product .trapeze--text{
 	color: #20a7d1;
 }
-.product .mask-left,
-.product .mask-right{
-	border-top: 32px solid #20a7d1;
+.product .trapeze--shadow{
+	top: 32px;
+	left: -30px;
+	width: 110px;
+	height: 1px;
+	background-color: transparent;
+	-webkit-box-shadow: 20px -8px 15px 2px #74787c;
+	        box-shadow: 20px -8px 15px 2px #74787c;
 }
+.box{
+	margin: 55px 0 68px;
+	padding: 0;
+}
+.box__image{
+	width: 95px;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 5px;
+}
+.img-shadow{
+	opacity: 0.4;
+    -webkit-filter: brightness(0%) blur(3px);
+            filter: brightness(0%) blur(3px);
+    height: 10px;
+    margin-top: 10px;
+}
+.box__text{
+	width: calc(100% - 125px);
+	display: inline-block;
+}
+.box__text--title{
+	margin-top: -10px;
+}
+.box__line{
+	width: 130px;
+	height: 1px;
+	background-color: #169bc4;
+	margin: 20px 0;
+}
+
 
 
 
