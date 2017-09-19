@@ -62,6 +62,7 @@ body {
 	background: -webkit-linear-gradient(280deg, #20a7d1 50%, #25c3e8, #20a7d1);
 	background: -moz-linear-gradient(280deg, #20a7d1 50%, #25c3e8, #20a7d1);
 	background: -o-linear-gradient(280deg, #20a7d1 50%, #25c3e8, #20a7d1);
+	background: -ms-linear-gradient(170deg, #20a7d1 50%, #25c3e8, #20a7d1);
 	background: linear-gradient(170deg, #20a7d1 50%, #25c3e8, #20a7d1);
 }
 
@@ -113,6 +114,10 @@ h3{
 	font-size: 29px;
 	font-family: 'walkway-semi_bold';
 }
+.logo p{
+	line-height: 29px;
+	letter-spacing: 0.8px;
+}
 .nav p span{
 	font-family: 'walkway-ultra_bold';
 }
@@ -128,9 +133,11 @@ h3{
 .nav-lower__item a{
 	text-decoration: none;
 	color: #fff;
+	letter-spacing: 0.2px;
 	-webkit-transition: color .2s ease;
 	-moz-transition: color .2s ease;
 	-o-transition: color .2s ease;
+	-ms-transition: color .2s ease;
 	transition: color .2s ease;
 }
 .nav-lower__item a{
@@ -187,23 +194,30 @@ p.trapeze--text{
 /*--------------NAVIGATION*/
 
 .nav{
-	background-color: #272b2f; 
+	background-color: #272b2f;
 }
 .logo p{
 	display: inline-block;
-	margin: 19px 20px;
+	margin: 19px 17px;
 	border-bottom: 2px solid #f19621;
-	line-height: 30px;
+	cursor: pointer;
+	-webkit-transition: border-bottom .3s linear;
+	-moz-transition: border-bottom .3s linear;
+	-o-transition: border-bottom .3s linear;
+	-ms-transition: border-bottom .3s linear;
+	transition: border-bottom .3s linear;
+}
+.logo p:hover{
+	border-bottom: 2px solid #1fb5e3;
 }
 .logo p span{
-
 	border-bottom: 2px solid #1fb5e3;
 }
 .nav__item li{
 	border-left: 1px solid  #3f4246;
 }
 .nav__item--text{
-	margin: 28px -123px 0 0;
+	margin: 26px -112px 0 0;
 }
 .nav__item--text li{
 	padding: 0 37px;
@@ -213,12 +227,14 @@ p.trapeze--text{
 	border-left: none;
 }
 .nav__item--icon{
+	position: relative;
 	margin-right: -16px;
 }
 .nav__item--icon li{
 	text-align: center;
 }
-.nav__item--icon li:last-child{
+.nav__item--icon li:nth-child(4),
+.dropdown-list{
 	background-color: #3f4246;
 }
 .icon-heart:hover{
@@ -227,6 +243,25 @@ p.trapeze--text{
 .icon-user:hover,
 .icon-earth:hover{
 	color: #fff;
+}
+.dropdown-list{
+	width: 72px;
+	position: absolute;
+	right: 71px;
+	z-index: 10;
+	border-bottom: 1px solid #5b5d5e;
+}
+.dropdown-list__item1{
+	top: 70px;
+}
+.dropdown-list__item2{
+	top: 141px;
+}
+.dropdown-list__item3{
+	top: 212px;
+}
+.hide{
+	display: none;
 }
 /*----------------SLIDER*/
 .slider{
@@ -427,7 +462,7 @@ p.trapeze--text{
 	height: 1px;
 	background-color: transparent;
 	-webkit-box-shadow: 20px -8px 15px 2px #74787c;
-	        box-shadow: 20px -8px 15px 2px #74787c;
+	box-shadow: 20px -8px 15px 2px #74787c;
 }
 .box{
 	margin: 55px 0 68px;
