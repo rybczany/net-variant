@@ -1,3 +1,4 @@
+/*-----------------FONTS*/
 @font-face {
   font-family: 'karbon-bold';
   src:  url('../fonts/Karbon-Bold.otf') format('opentype');
@@ -55,6 +56,10 @@ body {
 .row{
 	margin: 0;
 }
+.nav,
+.footer{
+	background-color: #272b2f;
+}
 .gray{
 	background-color: #f0f2f4;
 }
@@ -80,7 +85,7 @@ img {
 }
 
 
-/*--------------FONTS*/
+/*--------------TYPOGRAPHY*/
 h2, h3, p{
 	margin: 0;
 }
@@ -107,18 +112,11 @@ h3{
 .nav-lower,
 .service__header p,
 .trapeze--text,
-.box__text--title p{
+.box__text--title p,
+.footer__box--header a{
 	text-transform: uppercase;
 }
-.nav p{
-	font-size: 29px;
-	font-family: 'walkway-semi_bold';
-}
-.logo p{
-	line-height: 29px;
-	letter-spacing: 0.8px;
-}
-.nav p span{
+.logo a span{
 	font-family: 'walkway-ultra_bold';
 }
 .nav__item a,
@@ -130,7 +128,9 @@ h3{
 	font-size: 13px;
 }
 .nav__item a,
-.nav-lower__item a{
+.logo a,
+.nav-lower__item a,
+.footer__box--header a{
 	text-decoration: none;
 	color: #fff;
 	letter-spacing: 0.2px;
@@ -140,11 +140,17 @@ h3{
 	-ms-transition: color .2s ease;
 	transition: color .2s ease;
 }
+.logo a{
+	font-size: 29px;
+	font-family: 'walkway-semi_bold';
+	letter-spacing: 0.8px;
+}
 .nav-lower__item a{
 	font-size: 17px;
 	color: #909fae;
 }
-a:hover{
+.nav__item a:hover,
+.nav-lower__item a:hover{
 	text-decoration: underline;
 	color: #20a7d1;
 }
@@ -170,7 +176,21 @@ p.trapeze--text{
 	color: #fff;
 	font-size: 14px;
 }
-
+.footer__box--header a{
+	font-size: 15px;
+	font-family: 'karbon-bold';
+}
+.footer__box--item li a{
+	text-decoration: none;
+	font-size: 12px;
+	font-family: 'droid-sans';
+	color: #788086;
+	transition: color .2s ease;
+}
+.footer__box--header a:hover,
+.footer__box--item a:hover{
+	color: #20a7d1;
+}
 /*--------------ICONS*/
 
 .icon{
@@ -193,25 +213,31 @@ p.trapeze--text{
 /*----------------STYLE--------------------------*/
 /*--------------NAVIGATION*/
 
-.nav{
-	background-color: #272b2f;
-}
-.logo p{
+
+.logo{
+	position: relative;
 	display: inline-block;
-	margin: 19px 17px;
-	border-bottom: 2px solid #f19621;
-	cursor: pointer;
-	-webkit-transition: border-bottom .3s linear;
-	-moz-transition: border-bottom .3s linear;
-	-o-transition: border-bottom .3s linear;
-	-ms-transition: border-bottom .3s linear;
-	transition: border-bottom .3s linear;
+	margin: 17px;
 }
-.logo p:hover{
-	border-bottom: 2px solid #1fb5e3;
+.logo a::after,
+.logo a::before{
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 1px;
+	width: 173px;
+	height: 2px;
+	background-color: #f19621;
 }
-.logo p span{
-	border-bottom: 2px solid #1fb5e3;
+.logo a::before{
+	left: -1px;
+	width: 55px;
+	background-color: #1fb5e3;
+	z-index: 10;
+	transition: left 0.3s ease;
+}
+.logo a:hover::before{
+	left: 118px;
 }
 .nav__item li{
 	border-left: 1px solid  #3f4246;
@@ -494,6 +520,39 @@ p.trapeze--text{
 	background-color: #169bc4;
 	margin: 20px 0;
 }
+/*--------------------FOOTER*/
+.footer__box{
+	position: relative;
+	width: 150px;
+	display: inline-block;
+	margin: 54px 0 29px;
+	padding-right: 17px;
+	vertical-align: top;
+}
+.footer__box::before{
+	content: '';
+	position: absolute;
+	top: -8px;
+	left: 0;
+	width: 27px;
+	height: 1px;
+	background-color: #3a3f44;
+	transition: all 0.4s linear;
+}
+.footer__box:hover::before{
+	width: 150px;
+	background-color: #f19621;
+}
+.footer__box--header{
+	margin-bottom: 14px;
+}
+.footer__box--item li{
+	margin: 6px 0;
+	display: block; 
+}
+
+
+
 
 
 
