@@ -294,7 +294,7 @@ color: #b9c0c6;
 .dropdown-list{
 	width: 72px;
 	position: absolute;
-	right: 71px;
+	right: 72px;
 	z-index: 10;
 	border-bottom: 1px solid #5b5d5e;
 }
@@ -309,6 +309,9 @@ color: #b9c0c6;
 }
 .hide{
 	display: none;
+}
+.hide.active{
+	display: block;
 }
 /*----------------SLIDER*/
 .slider{
