@@ -15,6 +15,23 @@ $(document).ready(function() {
 		console.log(this);
 	});
 
+	$('.leave').on('mouseenter', function(){
+		$('.hide-search').addClass('active');
+		if('.hide-search.active'){
+			$(this).on('mouseleave', function(){
+				$('.hide-search').removeClass('active')
+			})
+		};
+	$('.leave').keypress(function(event){
+		var keycode = (event.keyCode ? event.keyCode : event.which);
+		if(keycode == '13'){
+			$('.hide-search').removeClass('active');
+		}
 
+		});
+		console.log(this);
+	})
+
+	
 
 });

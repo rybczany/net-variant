@@ -309,12 +309,11 @@ color: #b9c0c6;
 	top: 212px;
 }
 .dropdown-search{
-	position: relative;
+	position: absolute;
+	bottom: -135px;
 	padding: 0;
 	width: 100%;
 	background-color: #fff;
-	position: absolute;
-	bottom: -135px;
 	z-index: 5;
 }
 .icon-input{
@@ -342,14 +341,13 @@ color: #b9c0c6;
 .dropdown-search input:focus{
 	outline: none;
 }
-.hide{
-	display: none;
-}
-.hide.active{
-	display: block;
-}
+.hide,
 .hide-search{
 	display: none;
+}
+.hide.active,
+.hide-search.active{
+	display: block;
 }
 /*----------------SLIDER*/
 .slider{
