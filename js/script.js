@@ -21,13 +21,17 @@ $(document).ready(function() {
 			$(this).on('mouseleave', function(){
 				$('.hide-search').removeClass('active')
 			})
-		};
-	$('.leave').keypress(function(event){
-		var keycode = (event.keyCode ? event.keyCode : event.which);
-		if(keycode == '13'){
-			$('.hide-search').removeClass('active');
 		}
-
+		if('.hide-search.active'){
+			$('.dropdown-search').on('keypress', function(){
+				$('.icon-input').addClass('active')
+			})
+		}
+		$('.leave').keypress(function(event){
+			var keycode = (event.keyCode ? event.keyCode : event.which);
+			if(keycode == '13'){
+				$('.hide-search').removeClass('active') && window.location.reload();
+			}
 		});
 		console.log(this);
 	})

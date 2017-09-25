@@ -270,6 +270,10 @@ color: #b9c0c6;
 .nav__item--text li{
 	padding: 0 37px;
 }
+@media screen and (max-width: 1370px){
+	.nav__item--text{margin: 26px 0 0 -50px}
+	.nav__item--text li{padding: 0 10px}
+}
 .nav__item--text li:nth-child(1),
 .nav-lower__item li:nth-child(1){
 	border-left: none;
@@ -318,7 +322,7 @@ color: #b9c0c6;
 }
 .icon-input{
 	position: absolute;
-	left: 37%;
+	left: 34%;
 	bottom: -6px;
 	font-size: 78px;
 	line-height: 134px;
@@ -327,8 +331,7 @@ color: #b9c0c6;
 }
 .dropdown-search input{
 	line-height: 134px;
-	text-align: left;
-	text-indent: 43%;
+	text-align: center;
 	font-size: 96.26px;
 	font-family: 'karbon-bold';
 	width: 100%;
@@ -342,7 +345,8 @@ color: #b9c0c6;
 	outline: none;
 }
 .hide,
-.hide-search{
+.hide-search,
+.icon-input.active{
 	display: none;
 }
 .hide.active,
