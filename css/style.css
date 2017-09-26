@@ -506,6 +506,10 @@ color: #b9c0c6;
 .end-md p{
 	padding-left: 20px;
 }
+@media screen and (max-width: 768px){
+	.start-md p,
+	.end-md p{padding: 0}
+}
 .service__ad{
 	margin-top: 93px;
 	text-align: center;
@@ -520,6 +524,9 @@ color: #b9c0c6;
 }
 .service__ad--text{
 	margin: 30px 0 63px;
+}
+@media screen and (max-width: 992px){
+	
 }
 .service__ad--text p{
 	font-size: 28px;
@@ -630,7 +637,6 @@ color: #b9c0c6;
 	vertical-align: top;
 }
 .info-content--adjust{
-	padding-right: 0;
 	margin-top: 60px;
 	border-bottom: 1px solid #3a3f44;
 }
