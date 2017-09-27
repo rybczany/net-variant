@@ -177,6 +177,7 @@ h4{
 	color: #0a647f;
 }
 .service__descrip p,
+.service__descrip--small p,
 .product .box__text--article p{
 	font-family: 'droid-sans';
 	font-size: 14px;
@@ -500,15 +501,20 @@ color: #b9c0c6;
 .service__descrip{
 	padding-top: 53px;
 }
-.start-md p{
+.service .start-md p{
 	padding-right: 20px;
 }
-.end-md p{
+.service .end-md p{
 	padding-left: 20px;
 }
+.service__descrip--small{
+	display: none;
+}
 @media screen and (max-width: 768px){
-	.start-md p,
-	.end-md p{padding: 0}
+	.service__descrip{padding: 10px}
+	.service .start-md p,
+	.service .end-md p{display: none;}
+	.service__descrip--small{display: block;}
 }
 .service__ad{
 	margin-top: 93px;
